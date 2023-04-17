@@ -15,3 +15,6 @@ if (age >= 20){
 }else {
     console.log("Sorry.. You are too young")
 };  
+
+// const title = document.querySelector(".hello");
+// html 부르기
