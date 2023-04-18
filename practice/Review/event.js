@@ -1,5 +1,8 @@
 const hello =document.querySelector("#hello");
 
+const link = document.querySelector("a");
+
+
 console.log(hello)
 
 function handleTitleClick(){
@@ -32,6 +35,14 @@ function handleWindowOffline(){
 function handleWindowOnline(){
     alert("YeeeeeeeeeeS")
 }
+
+function handleLinkClick(event){
+    event.preventDefault();//eventの基本動作を止める
+
+    console.log(event);
+}
+
+link.addEventListener("click", handleLinkClick);
 
 hello.onclick = handleTitleClick;
 hello.onmouseenter = handleMoustEnter;
