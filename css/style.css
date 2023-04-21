@@ -1,6 +1,7 @@
 .hidden {
   display: none;
 }
+/*
 img {
   position: absolute;
   width: 100%;
@@ -11,4 +12,30 @@ img {
   bottom: 0px;
   z-index: -1;
   opacity: 93%;
+} */
+
+body {
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+#clock {
+  margin-top: 5%;
+  font-size: min(60px, 15vw);
+}
+
+#greeting {
+  margin-top: 2%;
 }
