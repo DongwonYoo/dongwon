@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script
+      src="https://kit.fontawesome.com/42c2670712.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--font awesome-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Document</title>
@@ -16,6 +21,9 @@
     </div>
     <main>
       <h2 id="clock">00:00:00</h2>
+      <aside id="reset">
+        <i class="fa-solid fa-rotate-right"></i>
+      </aside>
       <form class="hidden" id="login-form">
         <input
           required
@@ -25,7 +33,6 @@
         />
         <input type="submit" value="Login" />
       </form>
-
       <h1 id="greeting" class="hidden"></h1>
       <form id="todo-form">
         <input
@@ -41,6 +48,7 @@
         <span></span>
       </div>
     </main>
+    <script src="js/reset.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
