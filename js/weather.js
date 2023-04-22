@@ -22,7 +22,7 @@ function onGeoOk(position) {
       //HTML ElementへAPI
       city.innerText = data.name;
       weatherIcon.innerHTML = `<img src="./img/icons/${weatherIconCode}.png">`;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}℃`;
+      weather.innerText = `${Math.floor(data.main.temp)}℃`;
     });
 }
 function onGeoError() {

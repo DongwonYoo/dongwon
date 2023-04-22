@@ -3,6 +3,7 @@
 }
 html {
   height: 100%;
+  font-family: "Sawarabi Mincho", serif;
 }
 
 /*
@@ -23,7 +24,16 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+#weather {
+  display: inline-block;
+  justify-content: end;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 
+#weather span:nth-child(2) img {
+  margin-bottom: -4.8%;
+  width: 2rem;
+}
 main {
   align-items: center;
   display: flex;
@@ -40,4 +50,6 @@ main {
 
 #greeting {
   margin-top: 2%;
+}
+@media (max-width: 768px) {
 }
