@@ -44,6 +44,9 @@ main {
   font-weight: bold;
   text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
 }
+#login-form {
+  margin: 1rem 0 1rem 0;
+}
 
 #clock {
   margin-top: 5%;
@@ -52,14 +55,60 @@ main {
 
 #greeting {
   margin-top: 2%;
+  color: mintcream;
 }
-/* @media (max-width: 768px) {
-  #weather {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+
+ul {
+  max-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  align-items: start;
+  width: 50%;
+  margin-top: 30px;
+  max-width: min(525px, 50vw);
+  overflow-y: scroll;
+  position: relative;
+}
+ul::-webkit-scrollbar {
+  display: none;
+}
+li {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  min-height: 70%;
+  list-style: none;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+li button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+}
+
+footer {
+  display: flex;
+  width: 25%;
+  margin: 0 auto;
+  bottom: 5%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  footer {
+    width: 80%;
+    margin: 0 auto;
+    bottom: 28%;
   }
-} */
+}
