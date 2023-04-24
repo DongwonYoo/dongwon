@@ -24,9 +24,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 #weather {
-  display: inline-block;
-  justify-content: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -51,5 +53,13 @@ main {
 #greeting {
   margin-top: 2%;
 }
-@media (max-width: 768px) {
-}
+/* @media (max-width: 768px) {
+  #weather {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+} */
