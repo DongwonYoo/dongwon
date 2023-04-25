@@ -93,7 +93,7 @@ li button {
 
 footer {
   display: flex;
-  width: 25%;
+  width: 60%;
   margin: 0 auto;
   bottom: 5%;
   position: absolute;
@@ -104,11 +104,13 @@ footer {
   background-color: rgba(0, 0, 0, 0.3);
   text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
 }
-
+#quote {
+  margin: 0 auto;
+}
 @media (max-width: 768px) {
   footer {
     width: 80%;
     margin: 0 auto;
-    bottom: 28%;
+    bottom: 5%;
   }
 }
