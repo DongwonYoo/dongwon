@@ -84,13 +84,12 @@
       <button id="mode-btn">Fill</button>
       <button id="destroy-btn">Destroy</button>
       <button id="eraser-btn">Erase</button>
-      <input type="file" accept="image/*" id="file" />
-      <!-- accept="image/* = only image -->
-      <input
-        type="text"
-        placeholder="Write and then double click!!"
-        id="text"
-      />
+      <label for="file">
+        Add Photo
+        <input type="file" accept="image/*" id="file" />
+        <!-- accept="image/* = only image -->
+      </label>
+      <input type="text" placeholder="Write Text" id="text" />
       <button id="save">Save</button>
     </div>
     <script src="app.js"></script>
