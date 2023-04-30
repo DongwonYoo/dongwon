@@ -9,12 +9,15 @@
   <script type="text/babel">
     const root = document.getElementById("root");
     function App() {
-      const [counter, plusCounter] = React.useState(0);
-
+      const [counter, setCounter] = React.useState(0);
+      const onClick = () => {
+        // setCounter(counter + 1);
+        setCounter((current) => current + 1); //現在stateを獲得
+      };
       return (
         <div>
-          <h3>Total clicks:</h3>
-          <button>click me</button>
+          <h3>Total clicks:{counter}</h3>
+          <button onClick={onClick}>click me</button>
         </div>
       );
     }
