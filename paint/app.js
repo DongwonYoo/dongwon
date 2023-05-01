@@ -21,6 +21,8 @@ ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
 let isPainting = false;
 let isFilling = false;
+let paintColor = "";
+let isErasing = false;
 
 function onMove(event) {
   if (isPainting) {
@@ -46,7 +48,9 @@ function onLineWidthChange(event) {
 
 function onColorChange(event) {
   ctx.strokeStyle = event.target.value;
+  paintColor = ctx.strokeStyle;
   ctx.fillStyle = event.target.value;
+  fillColor = ctx.fillStyle;
 }
 
 function onColorClick(event) {
@@ -75,10 +79,32 @@ function onDestroyClick() {
   ctx.fillStyle = "white";
   ctx.fillRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 }
+// function onEraserClick(event) {
+//   if (isErasing === false) {
+//     isErasing = true;
+//     paintColor = ctx.strokeStyle;
+//     ctx.strokeStyle = "white";
+//     eraserBtn.innerText = "IS ERASING";
+//   } else if (isErasing === true) {
+//     isErasing = false;
+//     ctx.strokeStyle = paintColor;
+//     eraserBtn.innerText = "Erase";
+//   }
+// }
 function onEraserClick(event) {
-  ctx.strokeStyle = "white";
-  isFilling = false;
-  modeBtn.innerText = "Fill";
+  if (isErasing === false) {
+    ctx.save();
+    isErasing = true;
+    ctx.strokeStyle = "white";
+    isFilling = false;
+    modeBtn.innerText = "Fill";
+    eraserBtn.innerText = "IS ERASING";
+  } else if (isErasing === true) {
+    ctx.restore();
+    isErasing = false;
+    eraserBtn.innerText = "Erase";
+    console.log(ctx.strokeStyle);
+  }
 }
 function onFileChange(event) {
   const file = event.target.files[0];
