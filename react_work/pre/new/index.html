@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function Btn() {
+      return (
+        <button
+          style={{
+            backgroundColor: "tomato",
+            padding: "10px",
+            bodder: 0,
+            bodderRadius: 10,
+          }}
+        >
+          Save Changes
+        </button>
+      );
+    }
+
+    function App() {
+      return (
+        <div>
+          <Btn text="" />
+          <Btn text="" />
+        </div>
+      );
+    }
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root); //UI refresh
+  </script>
+</html>
